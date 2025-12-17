@@ -1,12 +1,10 @@
-#!/usr/bin/env python3
 import os
 import sys
-from typing import Any, List
+from typing import List
 import subprocess
 
 import parser as p
-
-AST = Any
+from parser import AST
 
 class Codegen:
     def __init__(self):
@@ -180,7 +178,7 @@ def jasmin_to_bytecode(j_file: str, class_name: str):
 
 def main():
     if len(sys.argv) < 2:
-        print("usage: j-=2.py <input.txt> [ClassName] [--ast]")
+        print("usage: j-=2.py <filepath> [--ast]")
         sys.exit(1)
 
     inp_path = sys.argv[1]
@@ -212,5 +210,25 @@ if __name__ == "__main__":
 # install python, jdk and jasmin
 # https://adoptium.net/temurin/releases/
 # https://sourceforge.net/projects/jasmin/
+
+# Create a virtual environment (run once)
+#   python -m venv venv
+
+# Activate the virtual environment
+#   Windows (PowerShell):
+#     venv\Scripts\Activate.ps1
+#
+#   Windows (cmd):
+#     venv\Scripts\activate
+#
+#   Linux / macOS:
+#     source venv/bin/activate
+
+# Upgrade pip
+#   python -m pip install --upgrade pip
+
+# Install anytree
+#   pip install anytree
+
 # compile: python3 j-=2.py .\examples\nesting.j-=2 --ast
 # run: java -cp out nesting  (runs out/nesting.class)
