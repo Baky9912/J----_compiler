@@ -245,5 +245,5 @@ if __name__ == "__main__":
 # Linux / macOS
 #   hexdump -C <program_name>.class
 
-# Dissasemble java bytecode to textual java bytecode
+# View the textual JVM bytecode
 # javap -c -classpath out <program_name>
