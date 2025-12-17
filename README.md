@@ -25,19 +25,23 @@ Educational compiler for a tiny language, targeting Jasmin assembly and Java byt
 # Install anytree
 #   pip install anytree
 
-# compile: python3 j-=2.py .\examples\nesting.j-=2 --ast
-# run: java -cp out nesting  (runs out/nesting.class)
+# compile: python3 j-=2.py .\examples\<classname>.j-=2 --ast
+# run: java -cp out <program_name>  (runs out/<program_name>.class)
 
-# Hex dump of .class files
+
+# Hex dump / hex view of .class files
 
 # Windows (PowerShell)
-#   Format-Hex Main.class
+#   Format-Hex <program_name>.class
 
 # Windows (CMD)
-#   certutil -dump Main.class
+#   certutil -dump <program_name>.class
 
 # Linux / macOS
-#   hexdump -C Main.class
+#   hexdump -C <program_name>.class
+
+# View the textual JVM bytecode
+# javap -c -classpath out <program_name>
 ```
 
 ## Third-party notice
