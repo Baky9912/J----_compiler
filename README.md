@@ -5,6 +5,26 @@ Educational compiler for a tiny language, targeting Jasmin assembly and Java byt
 # install python, jdk and jasmin
 # https://adoptium.net/temurin/releases/
 # https://sourceforge.net/projects/jasmin/
+
+# Create a virtual environment (run once)
+#   python -m venv venv
+
+# Activate the virtual environment
+#   Windows (PowerShell):
+#     venv\Scripts\Activate.ps1
+#
+#   Windows (cmd):
+#     venv\Scripts\activate
+#
+#   Linux / macOS:
+#     source venv/bin/activate
+
+# Upgrade pip
+#   python -m pip install --upgrade pip
+
+# Install anytree
+#   pip install anytree
+
 # compile: python3 j-=2.py .\examples\nesting.j-=2 --ast
 # run: java -cp out nesting  (runs out/nesting.class)
 ```
