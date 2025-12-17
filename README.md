@@ -27,6 +27,17 @@ Educational compiler for a tiny language, targeting Jasmin assembly and Java byt
 
 # compile: python3 j-=2.py .\examples\nesting.j-=2 --ast
 # run: java -cp out nesting  (runs out/nesting.class)
+
+# Hex dump of .class files
+
+# Windows (PowerShell)
+#   Format-Hex Main.class
+
+# Windows (CMD)
+#   certutil -dump Main.class
+
+# Linux / macOS
+#   hexdump -C Main.class
 ```
 
 ## Third-party notice
